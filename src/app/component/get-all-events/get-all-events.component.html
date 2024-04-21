@@ -1,0 +1,91 @@
+<p>get-all-events works!</p>
+<h2>Liste des événements</h2>
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from themes.themewild.com/smartshop/order-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Mar 2022 08:58:48 GMT -->
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>Smartshop - eCommerce Bootstrap 5 HTML5 Template.</title>
+
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="../../../assets/css/magnific-popup.min.css">
+
+<link rel="stylesheet" href="../../../assets/css/fontawesome.min.css">
+
+<link rel="stylesheet" href="../../../assets/css/jquery.fancybox.min.css">
+
+<link rel="stylesheet" href="../../../assets/css/jquery-ui.css">
+
+<link rel="stylesheet" href="../../../assets/css/themify-icons.css">
+
+<link rel="stylesheet" href="../../../assets/css/flaticon.css">
+
+<link rel="stylesheet" href="../../../assets/css/niceselect.css">
+
+<link rel="stylesheet" href="../../../assets/css/animate.css">
+
+<link rel="stylesheet" href="../../../assets/css/flex-slider.min.css">
+
+<link rel="stylesheet" href="../../../assets/css/owl-carousel.css">
+
+<link rel="stylesheet" href="../../../assets/css/slicknav.min.css">
+
+<link rel="stylesheet" href="../../../assets/css/default.css">
+<link rel="stylesheet" href="../../../assets/css/style.css">
+<link rel="stylesheet" href="../../../assets/css/responsive.css">
+</head>
+<div class="container mt-5">
+    <h2>List of Events</h2>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="account-content">
+          <h4 class="account-content-title"><i class="far fa-calendar-alt"></i> My Events</h4>
+          <div class="account-content-table">
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Place</th>
+                    <th>Poster</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let event of events">
+                    <td>{{ event.nom }}</td>
+                    <td>{{ event.description }}</td>
+                    <td>{{ event.date }}</td>
+                    <td>{{ event.lieu }}</td>
+                    <td>
+                      <img [src]="event.affiche" alt="Event Poster" class="img-fluid" style="max-width: 100px;">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="events.length === 0" class="row mt-3">
+      <div class="col-lg-12">
+        <p>No events available</p>
+      </div>
+    </div>
+  </div>
+  
+</html>

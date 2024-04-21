@@ -1,0 +1,14 @@
+<p>get-event-by-id works!</p>
+<p>Details de l'événement</p>
+
+<div [hidden]="!event">
+  <p><strong>Nom:</strong> {{ event?.nom }}</p>
+  <p><strong>Description:</strong> {{ event?.description }}</p>
+  <p><strong>Date:</strong> {{ event?.date | date }}</p>
+  <p><strong>Lieu:</strong> {{ event?.lieu }}</p>
+  <p><strong>Affiche:</strong> {{ event?.affiche }}</p>
+</div>
+
+<div [hidden]="event">
+  <p>Chargement des détails de l'événement...</p>
+</div>
